@@ -1,0 +1,22 @@
+body{
+    background-image: url("DMarieee.github.io/images/wood.webp");
+}
+
+.header{
+    background-color: CornflowerBlue;
+    text-align: center;
+    font-family: Georgia;
+}
+
+.about-me{
+    font-size: 20px;
+    opacity: 50%;
+}
+
+.title{
+    font-weight:bold;
+}
+
+h1{
+    color:azure;
+}
