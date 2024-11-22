@@ -2,7 +2,846 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: no@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     text-decoration: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+    font-size: 62.5%;  
+    overflow-x: hidden;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #eb0f88;
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background:#eb0f88;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+    font-size: 3rem;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.logo:hover {
+    transform: scale(1.1);
+}
+.navbar  a{
+    font-size: 1.8rem;
+    color: whitesmoke;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid  transparent;
+}
+nav a:hover,
+nav a.active{
+    color: whitesmoke;
+    border-bottom: 3px solid white;
+}
+#menu-icon {
+    font-size: 3.6rem;
+    color:#eb0f88;
+    display: none;
+}
+
+@media(max-width:995px) {
+    #menu-icon {
+        display: block;
+    }
+    .navbar{
+      position: absolute;
+      display: none;
+      top: 100%;
+      right: 0;
+      width: 40%;
+      border-left: 3px solid #eb0f88;
+      border-bottom: 3px solid #eb0f88;
+      border-bottom-left-radius: 2rem;
+      padding: 1rem 3%;
+      background-color: #161616;
+      border-top: 0.1rem solid rgba(0,0,0,1);
+}
+.navbar.active {
+    display: block;
+}
+.navbar a{
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+}
+nav a:hover,
+nav a:action{
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-bottom: 0.5rem solid #eb0f88;
+ }
+}
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+span{
+    color: #eb0f88;
+}
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+.home-content p{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.home-img{
+    margin-top: 50px;
+}
+.home-img img{
+    position: relative;
+    width: 27.5vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid #eb0f88;
+    cursor: pointer;
+}
+.home-img img:hover{
+    transform: scale(1.01);
+    filter: drop-shadow(0 0 25px #eb0f88);
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: 0.2rem solid #eb0f88;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #eb0f88;
+}
+
+.social-icons a:hover{
+    color: white;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #eb0f88;
+    box-shadow: 0  0 25px #eb0f88;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #eb0f88;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    border: 2px solid #eb0f88;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale3d(1.03);
+    background-color: #eb0f88;
+    color: white;
+    box-shadow: 0 0 25px #eb0f88;
+}
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+.typing-text span{
+    position: relative;
+}
+.typing-text span::before{
+    content: "Web Developer";
+    color: #eb0f88;
+    animation: words 20s infinite;
+}
+.typing-text span::after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor{
+    to{
+        border-left: 3px solid #eb0f88;
+    }
+}
+@keyframes words{
+    0%,20%{
+       content: "Web Developer";
+    }
+    21%, 40%{
+        content: "Dancer";
+    }
+    41%, 60%{
+        content: "Photographer";
+    }
+    61%, 80%{
+        content: "Designer";
+    }
+    81%, 100%{
+        content: "Reader";
+    }
+}
+
+@media(max-width: 100px){
+    .home{
+        gap:4rem;
+    }
+}
+
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+  
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
+
+/* General Body Style */
+body {
+    background-color: #000; /* Black background for the entire page */
+    color: white; /* Default text color to white */
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* About Me Section */
+.about {
+    background-color: #000; /* Black background */
+    color: white; /* White text color */
+    padding: 4rem 2rem;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1200px; /* Match the width of the Projects section */
+    border-top: 3px solid #eb0f88; /* Add a border on top to separate it */
+    border-bottom: 3px solid #eb0f88; /* Optional: add a bottom border for balance */
+}
+
+.about .heading {
+    font-size: 3.5rem; /* Same heading size as Projects */
+    color: #fff;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-family: 'Arial', sans-serif;
+}
+
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-img {
+    width: 300px; /* Increase image size */
+    height: 300px; /* Increase image size */
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.about p {
+    font-size: 1.4rem; /* Increase font size */
+    line-height: 1.8;
+    color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.more-btn {
+    background-color: #eb0f88;
+    color: white;
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.more-btn:hover {
+    background-color: #ff4fb3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about .heading {
+        font-size: 2.5rem; /* Reduce heading size on smaller screens */
+    }
+
+    .about-container {
+        padding: 2rem;
+    }
+
+    .about-img {
+        width: 250px; /* Adjust image size for smaller screens */
+        height: 250px;
+    }
+
+    .about p {
+        font-size: 1.2rem; /* Adjust paragraph font size for smaller screens */
+    }
+
+    .more-btn {
+        font-size: 1.2rem;
+        padding: 0.8rem 1.6rem;
+    }
+}
+
+ /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Education Section */
+.education {
+    background-color: #000; /* Black background */
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 3px solid #eb0f88; /* Border to match styling */
+    border-bottom: 3px solid #eb0f88; /* Optional bottom border for balance */
+  }
+  
+  /* Heading */
+  .education .heading {
+    font-size: 3.5rem; /* Same size as Project section heading */
+    color: #fff;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Timeline Container */
+  .timeline-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+  
+  /* Individual Timeline Item */
+  .timeline-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: 1rem 0;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  /* Hover Effect for Timeline Item */
+  .timeline-item:hover {
+    background-color: #222; /* Darken the background color when hovering over the container */
+  }
+  
+  .timeline-dot {
+    background-color: #eb0f88; /* Pink dot color */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    left: -40px; /* Position dot to the left of content */
+    z-index: 1;
+  }
+  
+  .timeline-date {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #eb0f88; /* Match dot color */
+    position: absolute;
+    left: -80px; /* Position the year slightly left of the dot */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .timeline-content {
+    background-color: #161616; /* Dark background for content */
+    padding: 2rem;
+    border-radius: 8px;
+    border: 2px solid #eb0f88;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .timeline-content h3 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+  
+  .timeline-content p {
+    font-size: 1.3rem;
+    color: #bbb; /* Lighter text color */
+    line-height: 1.6;
+  }
+  
+  /* Hover Effect for Timeline Content */
+  .timeline-item:hover .timeline-content {
+    background-color: #1f1f1f; /* Darken the background of content on hover */
+    transform: translateY(-5px);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .timeline-items {
+      padding: 1rem;
+    }
+  
+    .timeline-item {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .timeline-dot {
+      left: -30px; /* Adjust position of the dot */
+    }
+  
+    .timeline-date {
+      left: -50px; /* Adjust position of the date */
+      top: -10px;
+    }
+  }  
+
+  
+/* Talents Section */
+.talents {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #000; /* Changed to black */
+    color: white; /* Ensures text is visible on a black background */
+    text-align: center;
+    border-bottom: 3px solid #eb0f88;
+  }
+  
+  .talents .heading {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 30px;
+    color: #fff; /* White text color */
+  }
+  
+  /* Photography Section */
+  h4 {
+    font-size: 1.8rem;
+    color: #fff; /* White text color */
+    margin: 20px 0;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .card {
+    background-color: white; /* Dark card background */
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card__img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card__data {
+    padding: 15px;
+  }
+  
+  .card__description {
+    display: block;
+    font-size: 1rem;
+    color: #0056b3; /* Lighter grey for description */
+  }
+  
+  .card__title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #0056b3; /* White text color */
+    margin: 10px 0;
+  }
+  
+  .card__button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #eb0f88;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card__button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Dancing Section */
+  .dancing {
+    margin-top: 50px;
+  }
+  
+  .dance-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .dance-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .dance-img:hover {
+    transform: scale(1.05);
+  }  
+  
+
+/* General Section Styling */
+.project {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #000; /* Changed to black */
+    color: white; /* Ensures text is visible on a black background */
+    text-align: center;
+    border-bottom: 3px solid #eb0f88;
+}
+
+.project .heading {
+    font-size: 3.5rem;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 3rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Projects Grid */
+.projects-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns grid */
+    gap: 3rem;
+    justify-items: center;
+    align-items: stretch;
+    grid-auto-rows: 1fr; /* Ensures all rows have the same height */
+    margin: 2rem; /* Add margin around the grid */
+}
+
+/* Individual Project Card */
+.project-card {
+    background-color: #161616;
+    backdrop-filter: blur(30px);
+    border: 2px solid #eb0f88;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    cursor: pointer;
+    height: 100%; /* Ensures the card fills its grid cell */
+    width: 80%; /* Makes each card slimmer */
+    max-width: 350px; /* Adds a maximum width to limit the card size */
+    margin: 0 auto; /* Centers the card inside its grid cell */
+}
+
+/* Hover Effect for Project Card */
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 12px rgba(235, 15, 136, 0.6);
+}
+
+/* Project Card Image */
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Project Card Title */
+.project-card h3 {
+    font-size: 2rem;
+    color: #eb0f88;
+    margin-bottom: 1rem;
+}
+
+/* Project Card Description */
+.project-card p {
+    font-size: 1.2rem; /* Smaller paragraph text */
+    line-height: 1.4;
+    color: #ddd;
+    margin-bottom: 2rem;
+    flex-grow: 1; /* Ensures the text takes up space evenly */
+}
+
+/* Project Card Button */
+.project-card .btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    font-size: 1.4rem;
+    color: white;
+    background-color: #eb0f88;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    align-self: center;
+}
+
+/* Hover Effect for Button */
+.project-card .btn:hover {
+    background-color: #ff4fb3;
+    transform: scale(1.1);
+}
+
+/* Project 4 Alignment with Projects 5 and 6 */
+.project-card:nth-child(4) {
+    grid-column: 1 / 2; /* Align Project 4 with the first column */
+    grid-row: 2; /* Place Project 4 in the second row */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project {
+        padding: 3rem 1rem;
+    }
+
+    .project .heading {
+        font-size: 3rem;
+    }
+
+    .project-card {
+        padding: 1.5rem;
+        width: 90%; /* Adjust width for smaller screens */
+        max-width: none; /* Remove the max-width for smaller screens */
+    }
+
+    .project-card h3 {
+        font-size: 1.8rem;
+    }
+
+    .project-card p {
+        font-size: 1rem; /* Even smaller for smaller screens */
+        line-height: 1.3;
+    }
+
+    .project-card .btn {
+        font-size: 1.2rem;
+    }
+}
+
+/* General Styling for the Contact Section */
+.contact {
+    padding: 60px 20px;
+    background-color: #000; /* Black background */
+    text-align: center;
+  }
+  
+  .contact .heading {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-family: 'Arial', sans-serif;
+    color: #fff; /* White text color for heading */
+  }
+  
+  .contact .heading span {
+    color: #eb0f88; /* Color for "Me" part */
+  }
+  
+  /* Form Styling */
+  form {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #333; /* Dark background for the form */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .input-box {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+  
+  .input-box input,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #222; /* Dark background for inputs */
+    color: #fff; /* White text color for inputs */
+  }
+  
+  .input-box input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #eb0f88; /* Pinkish border on focus */
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  /* Submit Button */
+  .btn {
+    background-color: #eb0f88; /* Custom pink color */
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #d40974; /* Darker pink shade for hover */
+  }
+  
+  /* Footer Styling */
+  .footer {
+    background-color: #000; /* Black background for footer */
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+  }
+  
+  .footer .social {
+    margin-bottom: 20px;
+  }
+  
+  .footer .social a {
+    margin: 0 15px;
+    font-size: 1.8rem;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer .social a:hover {
+    color: #eb0f88; /* Pink color on hover */
+  }
+  
+  .footer .list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .footer .list li a {
+    color: #fff;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer .list li a:hover {
+    color: #eb0f88; /* Pink color on hover */
+  }
+  ne;
     outline: none;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
