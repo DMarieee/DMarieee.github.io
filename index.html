@@ -3,188 +3,266 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
     <title>Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header>
-        <a href="#" class="logo">Dang</a>
+    <header class="header">
+      <a href="#" class="logo">Dang</a>
 
-        <nav>
-            <a href="#" class="active">Home</a>
-            <a href="#" >About Me</a>
-            <a href="#" >Skills&Talents</a>
-            <a href="#" >Education</a>
-            <a href="#" >Projects</a>
-            <a href="#" >Contact</a>
+      <i class="fa-solid fa-bars" class="menu-icon"></i>
+        
+      <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#education">Education</a>
+            <a href="#talents">Talents</a>
+            <a href="#project">Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
-    </header>
-    <section class="home">
+     </header>
+
+    <section class="home" id="home">
       <div class="home-img">
         <img src ="images/dang5.JPG" alt="">
       </div>
       <div class="home-content">
         <h1>Hi, It's <span>Dang</span></h1>
         <h3 class="typing-text">I'm a <span></span></h3>
-        <p>"Hi there! I'm a second-year Computer Science student at the University of Immaculate Conception, where I blend curiosity with creativity. Driven by innovation, I’m always on the lookout for new tech, fresh ideas, and opportunities to turn concepts into reality. Join me on my journey of discovery, where every challenge is an opportunity to learn and grow."</p>
+        <p>"Hi there! I'm a second-year Computer Science student at the University of Immaculate Conception, where I blend curiosity with creativity. Driven by innovation,
+            I’m always on the lookout for new tech, fresh ideas, and opportunities to turn concepts into reality. 
+            Join me on my journey of discovery, where every challenge is an opportunity to learn and grow."</p>
+       
         <div class="social-icons">
            <a target= "-blank" href="https://www.facebook.com/daniellmarie.castada"><i class="fa-brands fa-facebook"></i></a>
            <a target= "-blank" href="https://www.instagram.com/dmrieeee/"><i class="fa-brands fa-instagram"></i></a>
            <a target= "-blank" href="https://github.com/DMarieee/DMarieee.github.io"><i class="fa-brands fa-github"></i></a>
           </div>
-        <a href="#" class="btn">More</a>
-      </div>
-    </section>
-</body>
-</html>  
-
-<!---About me section-->
-
-<section class="about" id="About Me">
-  <div class="main">
-      <div id ="right">
-      <img src="images/dang3.jpg"></div>
-      <div class="about-text">
-      <h2>About Me</h2>
-      <p>
-       HI! My name is Daniell Marie Castada, born on September 18, 2004, and I am 20 years old. I live in Durian Village Calinan Davao City, with my family, where I am the middle child of three sisters. From a young age, I’ve had a deep love for dancing, capturing moments through photography, and immersing myself in books. My passion for technology and curiosity about how things work led me to pursue a degree in Computer Science at the University of Immaculate Conception. Through this program, I am eager to explore the possibilities of tech and innovation, combining my love for creativity and problem-solving.
-      </p>
-      <button>MORE</button>
-  </div>
-  </div>
-  </section>
-
-  <!---Talents&Skills Section-->
-
-<section class="tskills" id="myTalents">
-  <div class="second">
-      <div id ="right">
-          <div class="skill-text">
-          <h2>Talents & Skills</h2>
-          <h4>Photography</h4>
-  <div class="container">
-          
-          <img src="images/photo1.jpg" alt="">
-          <img src="images/photo2.jpg" alt="">
-          <img src="images/photo3.jpg" alt="">
-          <img src="images/photo4.jpg" alt="">
-          <img src="images/photo5.jpg"  alt="">
-  
-              </div>
-           </div>
-      </div>
-  </div>
-  <div class="dancing">
-      <div class="dance-text">
-          <h4>Dancing</h4>
-          <div class="dance">         
-          <img src="images/dance3.jpg" alt="">
-          <img src="images/dance2.jpg" alt="">
-          <img src="images/dance4.jpg" alt="">
-      </div>
-      </div>
       
+          <a href="#" class="btn">More</a>
+      </div>
+    </section>
+
+<!-- About Me Section -->
+<section class="about" id="about">
+  <h2 class="heading">About Me</h2>
+  <div class="about-container">
+      <img src="images/dang3.jpg" alt="Daniell Marie Castada" class="about-img">
+      <p>
+          Hi! My name is Daniell Marie Castada, born on September 18, 2004, and I am 20 years old. I live in Durian Village, Calinan, Davao City, with my family, where I am the middle child of three sisters. From a young age, I’ve had a deep love for dancing, capturing moments through photography, and immersing myself in books. My passion for technology and curiosity about how things work led me to pursue a degree in Computer Science at the University of Immaculate Conception. Through this program, I am eager to explore the possibilities of tech and innovation, combining my love for creativity and problem-solving.
+      </p>
+      <button class="more-btn">MORE</button>
   </div>
-</section> 
+</section>
 
- 
-        <!---Education Section-->
 
-<section class="education" id="myEducation">
-  <h3>Education</h3>
-  <div class="third-container">
-      <div class="card">
-          <div class="imgBx">
-          <a href="#">
-              <img src="images/schoolcentral.jpg">
-          </a>
-          <h2>Calinan Central Elementary School</h2>
-          <div class="row">
-              <div class="column">
-          <p> Grade 6</p>
-          </div>
+<!-- Education Section -->
+<section class="education" id="education">
+  <h2 class="heading">Education</h2>
+
+  <div class="timeline-items">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2017</div>
+      <div class="timeline-content">
+        <h3>Elementary</h3>
+        <p>Calinan Elementary School</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2021</div>
+      <div class="timeline-content">
+        <h3>High School</h3>
+        <p>Holy Cross College of Calinan</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">2023</div>
+      <div class="timeline-content">
+        <h3>Senior High School</h3>
+        <p>Calinan National High School</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-date">Ongoing</div>
+      <div class="timeline-content">
+        <h3>College</h3>
+        <p>University of Immaculate Conception</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Talents Section -->
+<section class="talents" id="talents">
+  <h2 class="heading">Talents</h2>
+
+  <!-- Photography Section -->
+  <h4>Photography</h4>
+  <div class="card-container">
+    <article class="card">
+      <img src="images/photo2.jpg" alt="Governor Generoso, De Lavigan" class="card__img">
+      <div class="card__data">
+        <span class="card__description">Governor Generoso, De Lavigan</span>
+        <h2 class="card__title">Camp Bernardino</h2>
+        <a href="#" class="card__button">Read More</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="images/photo3.jpg" alt="Davao City, Baganihan" class="card__img">
+      <div class="card__data">
+        <span class="card__description">Davao City, Baganihan</span>
+        <h2 class="card__title">Blue Lagoon</h2>
+        <a href="#" class="card__button">Read More</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="images/photo4.jpg" alt="Samal, Penaplata" class="card__img">
+      <div class="card__data">
+        <span class="card__description">Samal, Penaplata</span>
+        <h2 class="card__title">Seashell Island</h2>
+        <a href="#" class="card__button">Read More</a>
+      </div>
+    </article>
+  </div>
+
+  <!-- Dancing Section -->
+  <div class="dancing">
+    <h4>Dancing</h4>
+    <div class="dance-images">
+      <img src="images/dance3.jpg" alt="Dancing performance 1" class="dance-img">
+      <img src="images/dance2.jpg" alt="Dancing performance 2" class="dance-img">
+      <img src="images/dance4.jpg" alt="Dancing performance 3" class="dance-img">
+    </div>
+  </div>
+</section>
+
+
+<section class="project" id="project">
+  <h2 class="heading">Projects</h2>
+
+  <div class="projects-box">
+      <!-- Project 1 -->
+      <div class="project-card">
+          <img src="images/project3.png" alt="Library Management System Screenshot">
+          <h3>Project 1</h3>
+          <p>
+              A Library Management System is a software application used by libraries to manage their 
+              resources efficiently. It helps librarians organize, catalogue, and circulate books, journals, 
+              media, and other materials available in the library.
+          </p>
+          <a href="#" class="btn">See Project</a>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+          <img src="images/project2.png" alt="Recipe Webpage Screenshot">
+          <h3>Project 2</h3>
+          <p>
+              This project is a webpage for a recipe showcasing "Kale Caesar Quinoa Salad with Roasted Chicken." 
+              It includes an image of the dish, a description, a list of ingredients, and step-by-step preparation 
+              instructions with estimated times for each step. The page also features a navigation bar and styled 
+              content for a visually appealing presentation.
+          </p>
+          <a href="#" class="btn">See Project</a>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+          <img src="images/project4.png" alt="E-commerce Website Screenshot">
+          <h3>Project 3</h3>
+          <p>
+              The website is designed to offer an engaging and informative platform where customers can explore 
+              products. It integrates a shopping experience, allowing users to browse, add items to the cart, 
+              and make purchases, all while providing a seamless and enjoyable experience.
+          </p>
+          <a href="#" class="btn">See Project</a>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card">
+          <img src="images/project1.png" alt="Fashion Blog Webpage Screenshot">
+          <h3>Project 4</h3>
+          <p>
+              This project is a fashion blog titled "Everyday with Isa," offering an insider's guide to New York 
+              Fashion Week (NYFW). It provides tips on tickets, show selection, and dressing for the event. 
+              Engaging content, images, and links make it informative and visually appealing for fashion enthusiasts.
+          </p>
+          <a href="#" class="btn">See Project</a>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="project-card">
+          <img src="images/project5.png" alt="Codecademy Achievements Screenshot">
+          <h3>Project 5</h3>
+          <p>
+              I’ve earned all the badges in Codecademy by completing CSS projects, enhancing my web design skills. 
+              This experience inspired me to explore advanced techniques, bringing creative ideas to life and 
+              making websites more interactive and visually appealing.
+          </p>
+          <a href="#" class="btn">See Project</a>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="project-card">
+          <img src="images/project1.png" alt="Fashion Blog Webpage Screenshot">
+          <h3>Project 6</h3>
+          <p>
+              This project is a fashion blog titled "Everyday with Isa," written by Isabell Rodriguez, which serves 
+              as an insider's guide to New York Fashion Week (NYFW). It offers tips on tickets, shows, and attire, 
+              and features engaging visuals and links to further resources for fashion enthusiasts.
+          </p>
+          <a href="#" class="btn">See Project</a>
       </div>
   </div>
-</div>
-</div>
-
-  
-<div class="third-container">
-  <div class="card">
-  <div class="imgBx">
-  <a href="#">
-      <img src="images/schoolholycross.jpg">
-  </a>
-  <h2>Holy Cross College of Calinan</h2>
-  <div class="row">
-  <div class="column">
-  <p> Junior High </p>
-  </div>
-  </div>
-</div>
-</div>
-</div>
-
-
-<div class="third-container">
-  <div class="card">
-  <div class="imgBx">
-  <a href="#">
-      <img src="images/schoolcnhs.jpg">
-  </a>
-  <h2>Calinan National High School</h2>
-  <div class="row">
-  <div class="column">
-  <p> Senior High </p>
-  </div>
-  </div>
-</div>
-</div>
-</div>
 </section>
 
+<!-- Contact Section -->
+<section class="contact" id="contact">
+  <h2 class="heading">Contact <span>Me</span></h2>
 
-<!---Project Section-->
+  <form action="#">
+    <div class="input-group">
+      <div class="input-box">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+      </div>
+      <div class="input-box">
+        <input type="tel" placeholder="Phone Number" required>
+        <input type="text" placeholder="Subject" required>
+      </div>
+    </div>
 
-<section class="projects" id="myProjects">
-  <div class = projtitle>
-  <h4>Projects</h4>
-  <div class="project">
+    <div class="input-group2">
+      <textarea placeholder="Your Message" rows="10" required></textarea>
+      <input type="submit" value="Send Message" class="btn">
+    </div>
+  </form>
+</section>
 
-  <ul>
-  <li><a href="https://DMarieee.github.io/fashion.blog.html" target="_blank">Fashion Blog</a></li>
-   <li><a href="https://DMarieee.github.io/healthyrecipes.html" target="_blank">Healthy Recipes</a></li>
+<footer class="footer">
+  <div class="social">
+    <a target="_blank" href="https://www.facebook.com/daniellmarie.castada"><i class="fa-brands fa-facebook"></i></a>
+    <a target="_blank" href="https://www.instagram.com/dmrieeee/"><i class="fa-brands fa-instagram"></i></a>
+    <a target="_blank" href="https://github.com/DMarieee/DMarieee.github.io"><i class="fa-brands fa-github"></i></a>
+  </div>
+
+  <ul class="list">
+    <li><a href="#">FAQ</a></li>
+    <li><a href="about">About Me</a></li>
+    <li><a href="project">Projects</a></li>
+    <li><a href="contact">Contact</a></li>
   </ul>
- 
-</div>
-  </div>
-</section>
-
-<section class="four" id="ct">
-  <div class="cont"> 
-      <h1>CONTACTS<span></span></h1>
-      <p>Email: dcastada_230000001323@uic.edu.ph</p>
-  </div>
-</section>
-
-<section>
-      <fieldset class="concat">
-        <legend class="contactme">Contact Me</legend>
-        <label for="fname">Full name:</label>
-        <input type="text" 
-               id="fname" 
-               name="fname"><br><br>
-        <label for="lname">Email:</label>
-        <input type="text" 
-               id="lname" 
-               name="lname"><br><br>
-        <label for="email">Message</label>
-        <input type="email" 
-               id="email" 
-               name="email"><br><br>
-        <button type="button" value="Contact Me">Contact Me</button>
-        </fieldset>
-    </section>
-</body>
-</html>
+</footer>
