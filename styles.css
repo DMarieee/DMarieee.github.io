@@ -41,11 +41,20 @@ body {
 .logo:hover {
     transform: scale(1.1);
 }
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
 .navbar  a{
     font-size: 1.8rem;
-    color: whitesmoke;
+    color: #fff;
+    padding: 10px;
     margin-left: 4rem;
-    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
     transition: 0.3s ease;
     border-bottom: 3px solid  transparent;
 }
@@ -55,21 +64,26 @@ nav a.active{
     border-bottom: 3px solid white;
 }
 #menu-icon {
-    font-size: 3.6rem;
-    color:#eb0f88;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
     display: none;
 }
 
-@media(max-width:995px) {
+@media(max-width:768px) {
     #menu-icon {
         display: block;
     }
     .navbar{
-      position: absolute;
       display: none;
-      top: 100%;
-      right: 0;
-      width: 40%;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      justify-content: center;
       border-left: 3px solid #eb0f88;
       border-bottom: 3px solid #eb0f88;
       border-bottom-left-radius: 2rem;
@@ -78,7 +92,7 @@ nav a.active{
       border-top: 0.1rem solid rgba(0,0,0,1);
 }
 .navbar.active {
-    display: block;
+    display: flex;
 }
 .navbar a{
     display: block;
@@ -836,6 +850,4 @@ body {
   
   .footer .list li a:hover {
     color: #eb0f88; /* Pink color on hover */
-  }
-  
-  
+  } 
